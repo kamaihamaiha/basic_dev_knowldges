@@ -24,7 +24,7 @@
 - Transfer-Encoding
 - Location: 重定向的目标 URL 
 - User-Agent：用户代理
-- [Range / Accpet-Ranges](header_range/readme.md)
+- [Range / Accept-Ranges](header_range/readme.md)
 - Cookie / Set-Cookie
 - Authorization
 - Cache

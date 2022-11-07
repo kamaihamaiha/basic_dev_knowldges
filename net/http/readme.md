@@ -8,3 +8,4 @@ HyperText Transfer Protocol: 超文本传输协议
 - [原理和工作机制](./section_1.md)
 - [请求方法和状态码](./section_2.md)
 - [HTTP 的 Header 和 Body](./section_3.md)
+- [REST](./section_4.md)
