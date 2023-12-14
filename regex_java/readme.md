@@ -38,4 +38,28 @@ The Regular expression .* will tell the computer that any character
 can be used any number of times.
 ```
 
+6. Optional character ( ? )
+   This symbol tells the computer that the preceding character may or may not be present in the string to be matched.
+```text
+Example :
+We may write the format for document file as – “docx?”
+The ‘?’ tells the computer that x may or may not be
+present in the name of file format.
+```
+
+7. The caret ( ^ ) symbol ( Setting position for the match )
+   The caret symbol tells the computer that the match must start at the beginning of the string or line.
+```text
+Example : ^\d{3} will match with patterns like "901" in "901-333-".
+```
+java 中要写成 ^\\d{3}
+
+8.  The dollar ( $ ) symbol
+
+It tells the computer that the match must occur at the end of the string or before \n at the end of the line or string.
+```text
+Example : -\d{3}$  will match with patterns like "-333" in "-901-333".
+```
+
+
 
