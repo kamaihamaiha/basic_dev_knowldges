@@ -1,8 +1,8 @@
 ## docker
 
-docker安装官方说明：https://docs.docker.com/engine/install
-dockerHub镜像仓库：https://hub.docker.com
-docker快速入门: https://docker.easydoc.net/
+- docker安装官方说明：https://docs.docker.com/engine/install
+- dockerHub镜像仓库：https://hub.docker.com
+- docker快速入门: https://docker.easydoc.net/
 
 ### 工作原理
 
