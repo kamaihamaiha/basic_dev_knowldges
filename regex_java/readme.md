@@ -4,62 +4,40 @@ regex: regular expression
 
 [学习网站](https://www.geeksforgeeks.org/write-regular-expressions/)
 
-1. Repeaters (  *, +, and { } )  
-   These symbols act as repeaters and tell the computer that the preceding character is to be used for more than just one time.
+---
 
-2. The asterisk symbol ( * )
-   It tells the computer to match the preceding character (or set of characters) for 0 or more times (upto infinite).
-```text
-Example : The regular expression ab*c will give ac, abc, abbc, abbbc….and so on 
+- [介绍&应用](#介绍应用)
+- [语法详解](./syntax.md)
+
+
+### 介绍&应用
+
+一种用于**匹配和操作文本**的工具；常用于文本查找、文本替换、文本格式校验等场景；
+
+正则表达式实质上是一段文本，或者说是一条字符串。
+
+#### 示例
+```regexp
+# 匹配文本中所有字母a开头的单词
+\b[aA]w*\b
 ```
 
-3. The Plus symbol ( + )
-   It tells the computer to repeat the preceding character (or set of characters) at atleast one or more times(up to infinite).
-   
-```text
-Example : The regular expression ab+c will give abc, abbc,
-abbc, … and so on.
+#### 程序开发种，正则表达式的应用
+
+一般关系型数据库都支持正则表达式查询，如 MySQL
+```sql
+# 查找名字为a开头的记录
+select * from table where REGEXP_LIKE(name, '^a');
 ```
 
-4. The curly braces { … }
-   It tells the computer to repeat the preceding character (or set of characters) for as many times as the value inside this bracket.
-```text
-Example : {2} means that the preceding character is to be repeated 2
-times, {min,} means the preceding character is matches min or  more
-times. {min,max} means that the preceding character is repeated at
-least min & at most max times.
-```
+##### 优缺点
 
-5. Wildcard ( . )
-   The dot symbol can take the place of any other symbol, that is why it is called the wildcard character.
-```text
-Example :
-The Regular expression .* will tell the computer that any character
-can be used any number of times.
-```
+- 功能强大，有效缩减代码量，提高维护性
+- 性能较慢，每次执行程序都需要重新解析正则表达式
 
-6. Optional character ( ? )
-   This symbol tells the computer that the preceding character may or may not be present in the string to be matched.
-```text
-Example :
-We may write the format for document file as – “docx?”
-The ‘?’ tells the computer that x may or may not be
-present in the name of file format.
-```
+#### 日常办公 正则表达式的应用
 
-7. The caret ( ^ ) symbol ( Setting position for the match )
-   The caret symbol tells the computer that the match must start at the beginning of the string or line.
-```text
-Example : ^\d{3} will match with patterns like "901" in "901-333-".
-```
-java 中要写成 ^\\d{3}
-
-8.  The dollar ( $ ) symbol
-
-It tells the computer that the match must occur at the end of the string or before \n at the end of the line or string.
-```text
-Example : -\d{3}$  will match with patterns like "-333" in "-901-333".
-```
+很多日常的文本编辑软件都支持正则表达式搜索、替换：vs code、nodepad++、word（语法存在差异）、excel（语法存在差异）
 
 
 
